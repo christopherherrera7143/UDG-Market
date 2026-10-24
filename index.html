@@ -13,41 +13,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- 2. Configuración de Tailwind (antes: tailwind-config.js) -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'] },
-          colors: {
-            'brand-bg':     '#F8FAFC',
-            'brand-orange': '#FF7A59',
-            'brand-navy':   '#1E293B',
-            'brand-mint':   '#34D399',
-            'brand-yellow': '#FBBF24',
-            'brand-red':    '#C8431F'
-          },
-          borderRadius: {
-            'xl-friendly':  '18px',
-            '2xl-friendly': '28px'
-          }
-        }
-      }
-    };
-  </script>
+  <!-- 2. Configuración de Tailwind (tailwind-config.js) -->
+  <script src="tailwind-config.js"></script>
 
-  <!-- 3. Estilos personalizados (antes: style.css) -->
-  <style>
-    /* Tema del Catálogo: fondo oscuro. Para modo claro usa:
-       --cat-bg:#ffffff; --cat-fg:#1E293B; --cat-muted:#64748B; */
-    :root { --cat-bg:#0E1426; --cat-fg:#ffffff; --cat-muted:#9AA3B8; }
-    .scrollbar-none::-webkit-scrollbar { display: none; }
-    .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
-    .card-in { animation: cardIn .35s cubic-bezier(.2,.8,.2,1); }
-    @keyframes cardIn { from { opacity:0; transform: translateY(12px) scale(.97); } to { opacity:1; transform:none; } }
-    .fav-on svg { fill: #FF7A59; stroke: #FF7A59; }
-    @media (prefers-reduced-motion: reduce) { .card-in { animation: none; } }
-  </style>
+  <!-- 3. Estilos personalizados (style.css) -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="bg-brand-bg text-slate-800 font-sans antialiased pb-24 md:pb-0 transition-colors duration-300">
@@ -83,15 +53,16 @@
 
       <!-- Tabs escritorio / tablet -->
       <nav class="hidden md:flex items-center gap-1 bg-slate-100 p-1 rounded-full" aria-label="Secciones">
-        <button data-tab="ubereats" class="tab-desktop px-4 py-2 rounded-full text-xs font-bold transition-all"><i class="fa-solid fa-store mr-1"></i> Explorar</button>
+        <button data-tab="ubereats" class="tab-desktop px-4 py-2 rounded-full text-xs font-bold transition-all"><i class="fa-solid fa-house mr-1"></i> Inicio</button>
         <button data-tab="catalog"  class="tab-desktop px-4 py-2 rounded-full text-xs font-bold transition-all"><i class="fa-solid fa-bag-shopping mr-1"></i> Catálogo</button>
         <button data-tab="swipe"    class="tab-desktop px-4 py-2 rounded-full text-xs font-bold transition-all"><i class="fa-solid fa-fire mr-1"></i> Match</button>
+        <a href="perfil.html"  class="tab-desktop px-4 py-2 rounded-full text-xs font-bold transition-all"><i class="fa-solid fa-user mr-1"></i> Perfil</a>
       </nav>
 
       <!-- Acceso rápido móvil -->
-      <button data-tab="swipe" class="md:hidden shrink-0 inline-flex items-center gap-1.5 bg-brand-orange text-white text-xs font-bold px-3.5 py-2 rounded-full shadow-sm shadow-orange-200">
-        <i class="fa-solid fa-fire"></i> Match
-      </button>
+      <a href="perfil.html" aria-label="Mi perfil" class="md:hidden shrink-0 inline-flex items-center gap-1.5 bg-brand-orange text-white text-xs font-bold px-3.5 py-2 rounded-full shadow-sm shadow-orange-200">
+        <i class="fa-solid fa-user"></i> Perfil
+      </a>
     </div>
   </header>
 
@@ -391,7 +362,7 @@
           <p class="mt-1.5 text-[13px] sm:text-sm leading-relaxed text-[#5B5560]">Tus brownies, tus apuntes o eso que ya no usas. Dale un lugar en el campus.</p>
         </div>
         <button class="mt-4 md:mt-0 w-full md:w-auto md:px-8 md:shrink-0 h-[52px] rounded-full bg-brand-orange text-brand-navy text-[15px] font-bold inline-flex items-center justify-center gap-2 shadow-[0_10px_20px_-8px_rgba(255,122,89,0.7)] active:scale-[0.98] transition">
-          <svg class="w-5 h-5"><use href="#i-plus"/></svg>Publicar mi primer anuncio
+          <svg class="w-5 h-5"><use href="publicar.html"/></svg>Publicar mi primer anuncio
         </button>
       </section>
 
@@ -481,101 +452,14 @@
 
   <!-- Navegación inferior (solo móvil) -->
   <nav class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-slate-200 pb-[env(safe-area-inset-bottom)]" aria-label="Secciones">
-    <div class="grid grid-cols-3 max-w-md mx-auto">
-      <button data-tab="ubereats" class="tab-mobile flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-bold transition"><i class="fa-solid fa-store text-lg"></i>Explorar</button>
+    <div class="grid grid-cols-4 max-w-md mx-auto">
+      <button data-tab="ubereats" class="tab-mobile flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-bold transition"><i class="fa-solid fa-house text-lg"></i>Inicio</button>
       <button data-tab="catalog"  class="tab-mobile flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-bold transition"><i class="fa-solid fa-bag-shopping text-lg"></i>Catálogo</button>
       <button data-tab="swipe"    class="tab-mobile flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-bold transition"><i class="fa-solid fa-fire text-lg"></i>Match</button>
+      <a href="perfil.html"  class="tab-mobile flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-bold transition"><i class="fa-solid fa-user text-lg"></i>Perfil</a>
     </div>
   </nav>
 
-<script>
-  /* ---------- Cambio de vista (antes: app.js) ---------- */
-  const catBg = getComputedStyle(document.documentElement).getPropertyValue('--cat-bg').trim();
-  const VIEWS = {
-    ubereats: { el: document.getElementById('view-ubereats'), bg: '#F8FAFC' },
-    catalog:  { el: document.getElementById('view-catalog'),  bg: catBg },
-    swipe:    { el: document.getElementById('view-swipe'),    bg: '#F8FAFC' }
-  };
-
-  function switchTab(name) {
-    for (const [key, v] of Object.entries(VIEWS)) v.el.classList.toggle('hidden', key !== name);
-
-    document.querySelectorAll('.tab-desktop').forEach(b => {
-      const on = b.dataset.tab === name;
-      b.classList.toggle('bg-white', on); b.classList.toggle('text-brand-navy', on); b.classList.toggle('shadow-sm', on);
-      b.classList.toggle('text-slate-500', !on);
-    });
-    document.querySelectorAll('.tab-mobile').forEach(b => {
-      const on = b.dataset.tab === name;
-      b.classList.toggle('text-brand-orange', on); b.classList.toggle('text-slate-400', !on);
-    });
-
-    document.body.style.backgroundColor = VIEWS[name].bg;
-    if (name === 'catalog') loadLazyImages();
-    window.scrollTo({ top: 0 });
-  }
-  document.querySelectorAll('[data-tab]').forEach(b => b.addEventListener('click', () => switchTab(b.dataset.tab)));
-
-  /* ---------- Imágenes diferidas con fallback ---------- */
-  function loadLazyImages() {
-    document.querySelectorAll('img[data-src]').forEach(img => {
-      img.src = img.dataset.src; img.removeAttribute('data-src');
-      img.onerror = () => { img.style.visibility = 'hidden'; };
-    });
-  }
-
-  /* ---------- Swipe deck ---------- */
-  const deck = [
-    { title:'Brownies de Sofi',       price:'$35',  unit:'MXN / pieza', rating:'4.9', desc:'Chocolate intenso, centro suave y hechos en casa. El antojo perfecto entre clases.', seller:'Sofía M. · CUCEA', initials:'SM', img:'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=75' },
-    { title:'Calculadora científica', price:'$180', unit:'MXN',         rating:'4.7', desc:'Casi nueva, perfecta para cálculo y física. Incluye tapa y pilas nuevas.', seller:'Andrés L. · CUCEI', initials:'AL', img:'https://images.unsplash.com/photo-1587145820266-a5951ee6f620?auto=format&fit=crop&w=900&q=75' },
-    { title:'Latte para llevar',      price:'$40',  unit:'MXN / vaso',  rating:'4.8', desc:'Café de especialidad preparado al momento. Pásalo a recoger antes de tu clase.', seller:'Alex V. · CUCEA', initials:'AV', img:'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=75' },
-    { title:'Sudadera lavanda',       price:'$150', unit:'MXN',         rating:'4.6', desc:'Talla M, súper suave y en excelente estado. Segunda vida para tu clóset.', seller:'Mariana C. · CUAAD', initials:'MC', img:'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=900&q=75' }
-  ];
-  let idx = 0, saved = 0; const history = [];
-  const $ = id => document.getElementById(id);
-
-  function renderCard(animate = true) {
-    const c = deck[idx];
-    $('sw-img').src = c.img; $('sw-img').alt = c.title;
-    $('sw-title').textContent = c.title; $('sw-price').textContent = c.price; $('sw-unit').textContent = c.unit;
-    $('sw-rating').textContent = c.rating; $('sw-desc').textContent = c.desc;
-    $('sw-seller').textContent = c.seller; $('sw-avatar').textContent = c.initials;
-    $('sw-count').textContent = `${idx + 1} de ${deck.length}`;
-    if (animate) { const card = $('swipe-card'); card.classList.remove('card-in'); void card.offsetWidth; card.classList.add('card-in'); }
-  }
-  function next(action) {
-    history.push({ idx, action });
-    if (action === 'save') { saved++; $('toast-text').textContent = `Guardaste "${deck[idx].title}". Míralo en Guardados.`; }
-    idx = (idx + 1) % deck.length; renderCard();
-  }
-  $('btn-pass').addEventListener('click', () => next('pass'));
-  $('btn-save').addEventListener('click', () => next('save'));
-  $('btn-back').addEventListener('click', () => {
-    const last = history.pop(); if (!last) return;
-    idx = last.idx; if (last.action === 'save') saved--;
-    $('toast-text').textContent = saved ? `${saved} favorito${saved > 1 ? 's' : ''} te espera${saved > 1 ? 'n' : ''} en Guardados.` : 'Tus favoritos te esperan en Guardados.';
-    renderCard();
-  });
-  /* Teclado en escritorio: ← pasar, → guardar, ↑ volver (solo en la vista Match) */
-  document.addEventListener('keydown', e => {
-    if (VIEWS.swipe.el.classList.contains('hidden') || e.target.matches('input')) return;
-    if (e.key === 'ArrowLeft') next('pass');
-    else if (e.key === 'ArrowRight') next('save');
-    else if (e.key === 'ArrowUp') $('btn-back').click();
-  });
-
-  /* ---------- Chips y favoritos ---------- */
-  const ON = ['bg-brand-navy','text-white','border-brand-navy'], OFF = ['bg-white','text-brand-navy','border-slate-200'];
-  $('swipe-chips').addEventListener('click', e => {
-    const chip = e.target.closest('.chip'); if (!chip) return;
-    document.querySelectorAll('#swipe-chips .chip').forEach(c => { c.classList.remove(...ON); c.classList.add(...OFF); });
-    chip.classList.remove(...OFF); chip.classList.add(...ON);
-  });
-  document.querySelectorAll('.fav').forEach(b => b.addEventListener('click', () => b.classList.toggle('fav-on')));
-
-  /* ---------- Init ---------- */
-  renderCard(false);
-  switchTab('ubereats');
-</script>
+  <script src="app.js" defer></script>
 </body>
 </html>
