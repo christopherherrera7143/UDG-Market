@@ -26,6 +26,23 @@ UDG Market está diseñada como una Progressive Web App (PWA). Esto significa qu
 3. Desliza hacia abajo en el menú y selecciona **"Agregar a inicio"** (Add to Home Screen).
 4. Toca "Agregar" en la esquina superior derecha. El ícono de la app se añadirá junto al resto de tus aplicaciones.
 
+## 🛠️ Cómo usar UDG Market
+
+¡Bienvenido a UDG Market! La plataforma está diseñada para que puedas comprar tu antojo entre clases o vender tus propios productos a la comunidad universitaria de forma rápida y segura.
+
+### 🛒 Si quieres Comprar
+1. **Inicia Sesión:** Utiliza tu correo institucional (`@alumnos.udg.mx`) para entrar. Esto garantiza que todos en la app son estudiantes reales.
+2. **Explora el Campus:** En la pantalla principal (Dashboard) verás los productos y alimentos disponibles hoy en tu centro universitario.
+3. **Revisa los Detalles:** Toca cualquier producto para ver su precio, descripción y, muy importante, las **alertas de alérgenos** (ej. si contiene lácteos o nuez).
+4. **Acuerda la Entrega:** Revisa en qué módulos, bibliotecas o áreas del campus entrega el vendedor y coordina el horario. 
+5. **¡Disfruta!** Encuéntrate con tu compañero en el punto acordado, realiza el pago y recibe tu pedido.
+
+### 🏪 Si quieres Vender
+Cualquier alumno puede convertirse en vendedor en un par de toques, sin necesidad de crear otra cuenta:
+1. **Activa tu Tienda:** Ve a la pestaña de **Perfil** en la barra inferior y enciende el interruptor **"Modo Vendedor"**.
+2. **Sube tus Productos:** Entra al menú de *Mi Inventario* para agregar lo que vendes. Sube una buena foto, fija tu precio y marca los alérgenos para cuidar a tus clientes.
+3. **Gestiona tus Entregas:** En la pestaña de **Ventas**, verás tus pedidos activos. El diseño está pensado para que, entre el estrés de las clases, sepas exactamente **Qué** vas a entregar, **Dónde** (punto de encuentro) y **Cuándo** (hora exacta).
+4. **Confirma y Cobra:** Una vez que entregues el producto, presiona **"Marcar Entregado"** para llevar el control de tus ventas del día.
 
 =======
 <div data-importer="image" align="center">
