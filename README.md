@@ -10,6 +10,21 @@
 <p data-importer="text" align="left">🎓 Campus Market<br><br>UDGMarket is a web platform designed to structure, digitize, and bring transparency to internal commerce (micro-entrepreneurship) among the student community of the university campus.<br><br>🎯 The Problem<br>Currently, informal commerce on campus offers no certainty regarding food ingredients and exposes students' privacy by forcing them to use personal phone numbers (WhatsApp) to coordinate purchases. This manual management through messaging groups interrupts class schedules, generates inventory waste (shrinkage) for sellers, and fails to guarantee sanitary or efficient logistical measures.<br><br>💡 The Solution<br>A centralized pre-order marketplace that eliminates insecure intermediation. The platform allows student sellers to publish catalogs with strict control over stock, ingredients, and allergens. Buyers can reserve products and pick them up at pre-established times through the validation of a unique digital code, keeping their personal data private.<br><br>🔥 Dynamic Discovery (Swipe / Tinder Module): Individually explore available food, drinks, and products by swiping cards, making a match, or saving your favorite items.<br><br>⏰ Custom Delivery Appointments: A schedule negotiation system where the seller receives immediate notifications to accept the proposed delivery time or suggest a time counteroffer.<br><br>📍 Campus Geolocation: Sellers activate their selling mode and share their live location or usual meeting point within the university facilities.<br><br>🎓 Exclusive Student Access: User authentication is strictly limited to institutional emails (@university.edu).</p>
 
 ###
+## 📱 Instalación 
+
+UDG Market está diseñada como una Progressive Web App (PWA). Esto significa que los estudiantes pueden instalarla directamente en sus celulares sin necesidad de descargarla desde la Play Store o la App Store, ahorrando espacio y tiempo.
+
+### Instalación en Android (Desde tu navegador)
+1. Abre el enlace de UDG Market en el navegador  de tu celular.
+2. Toca el menú de opciones (los tres puntos verticales en la esquina superior derecha).
+3. Selecciona la opción **"Agregar a la pantalla principal"** (Add to Home screen) o toca el botón flotante de **"Instalar aplicación"** si aparece en la parte inferior.
+4. Confirma la instalación. UDG Market aparecerá en tu cajón de aplicaciones como una app nativa.
+
+### Instalación en iOS (vía Safari)
+1. Abre el enlace de UDG Market usando el navegador **Safari** en tu iPhone.
+2. Toca el botón de **"Compartir"** (el ícono del cuadro con la flecha apuntando hacia arriba en la barra inferior).
+3. Desliza hacia abajo en el menú y selecciona **"Agregar a inicio"** (Add to Home Screen).
+4. Toca "Agregar" en la esquina superior derecha. El ícono de la app se añadirá junto al resto de tus aplicaciones.
 
 
 =======
